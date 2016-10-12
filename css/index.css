@@ -336,7 +336,7 @@ a:focus {
 
 /* single content item */
 .content__item {
-	background-image: url("./img/book_1.jpg");
+	background-image: url("../img/book_1.jpg");
 	background-size: cover;
   	position: absolute;
   	top: 0;
@@ -710,7 +710,7 @@ body #cdawrap {
 /* Redefine some styles for this layout */
 body {
   	background: #fff;
-	background-image: url("./img/toppage.jpg");	
+	background-image: url("../img/toppage.jpg");	
 	background-size: cover;
 }
 
