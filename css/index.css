@@ -22,6 +22,9 @@ body {
 }
 
 /* helper class when showing content */
+.noscroll {
+	overflow: hidden;
+}
 
 a {
   outline: none;
@@ -126,7 +129,7 @@ a:focus {
 }
 
 .category {
-  margin: 0;
+  margin-bottom: 50px;
   position: relative;
   font-size: 0.95em;
   font-style: italic;
@@ -368,14 +371,9 @@ a:focus {
 }
 
 /* content elements */
-.category--full {
-  font-size: 1.25em;
-  margin-bottom: 20px;
-  color: #ff00ff;	/*????*/
-}
-
 .title--full {
-  font-size: 3.25em;
+	text-align: center;
+	font-size: 3.25em;
 }
 
 .meta--full {
@@ -710,7 +708,7 @@ body #cdawrap {
 /* Redefine some styles for this layout */
 body {
   	background: #fff;
-	background-image: url("../img/toppage.jpg");	
+	background-image: url("../img/top.jpg");	
 	background-size: cover;
 }
 
@@ -737,7 +735,7 @@ body {
   color: #c84252;
 }
 
-.my__pro_itemtop {
+.item_top {
 	margin: 0;
   	font-size: 1.5em;
  	font-family: "Playfair Display", serif;
@@ -747,7 +745,7 @@ body {
 	border-bottom: 1px splid #ccc;
 }
 
-.my__pro_itemtop:first-letter {
+.item_top:first-letter {
 	margin-right: .1em;
 	font-size: 1.5em;
 }
@@ -763,7 +761,8 @@ body {
 }
 
 .introduct-me .table {
-	margin-left: 600px;
+	margin-left: 40%;
+	margin-right: 40%;
 }
 
 .introduct-me .table td {
@@ -781,7 +780,10 @@ body {
 	margin-left: 150px;
 }
 
-.my__pro_itemtop {
+.contact-me {
+	text-align: center;
+}
+.item_top {
         width: 100px;
         margin: 0;
         font-size: 1.0em;
@@ -791,19 +793,22 @@ body {
         border-bottom: 1px solid #ccc;
 }
 
-.my__pro_itemtop:first-letter {
+.item_top:first-letter {
         margin-right: .1em;
         font-size: 1.5em;
 }
 
 .works-link {
+	width: 800px;
+	height: 600px;
 	background: rgba(255, 255, 255, 0.3);
         font-size: 2.0em;
 	font-weight: bold;
         font-family: "Playfair Display", serif;
 	text-align: center;
-	line-height: 200%;
-	margin-left: 100px;
+	line-height: 300%;
+	margin-left: 35%;
+	margin-right: 35%;
 	padding: 20px;
 }
 
