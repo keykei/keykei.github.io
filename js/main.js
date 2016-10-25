@@ -9,41 +9,43 @@
  * http://www.codrops.com
  */
 
-(function() {
+(function(){
 
 	var bodyEl = document.body,
-		docElem = window.document.documentElement,
-		support = { transitions: Modernizr.csstransitions },
-		// transition end event name
-		transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		onEndTransition = function( el, callback ) {
-			var onEndCallbackFn = function( ev ) {
-				if( support.transitions ) {
-					if( ev.target != this ) return;
-					this.removeEventListener( transEndEventName, onEndCallbackFn );
-				}
-				if( callback && typeof callback === 'function' ) { callback.call(this); }
-			};
+	docElem = window.document.documentElement,
+	support = { transitions: Modernizr.csstransitions },
+	// transition end event name
+	transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
+	transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+	onEndTransition = function( el, callback ) {
+	
+		var onEndCallbackFn = function( ev ) {
 			if( support.transitions ) {
-				el.addEventListener( transEndEventName, onEndCallbackFn );
+				if( ev.target != this ) return;
+				this.removeEventListener( transEndEventName, onEndCallbackFn );
 			}
-			else {
-				onEndCallbackFn();
-			}
-		},
-		gridEl = document.getElementById('theGrid'),
-		sidebarEl = document.getElementById('theSidebar'),
-		gridItemsContainer = gridEl.querySelector('section.grid'),
-		contentItemsContainer = gridEl.querySelector('section.content'),
-		gridItems = gridItemsContainer.querySelectorAll('.grid__item'),
-		contentItems = contentItemsContainer.querySelectorAll('.content__item'),
-		closeCtrl = contentItemsContainer.querySelector('.close-button'),
-		current = -1,
-		lockScroll = false, xscroll, yscroll,
-		isAnimating = false,
-		menuCtrl = document.getElementById('menu-toggle'),
-		menuCloseCtrl = sidebarEl.querySelector('.close-button');
+			if( callback && typeof callback === 'function' ) { callback.call(this); }
+		};
+		if( support.transitions ) {
+		el.addEventListener( transEndEventName, onEndCallbackFn );
+		}
+		else {
+			onEndCallbackFn();
+		}
+	},
+	
+	gridEl = document.getElementById('theGrid'),
+	sidebarEl = document.getElementById('theSidebar'),
+	gridItemsContainer = gridEl.querySelector('section.grid'),
+	contentItemsContainer = gridEl.querySelector('section.content'),
+	gridItems = gridItemsContainer.querySelectorAll('.grid__item'),
+	contentItems = contentItemsContainer.querySelectorAll('.content__item'),
+	closeCtrl = contentItemsContainer.querySelector('.close-button'),
+	current = -1,
+	lockScroll = false, xscroll, yscroll,
+	isAnimating = false,
+	menuCtrl = document.getElementById('menu-toggle'),
+	menuCloseCtrl = sidebarEl.querySelector('.close-button');
 
 	/**
 	 * gets the viewport width and height
