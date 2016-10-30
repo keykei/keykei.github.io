@@ -686,7 +686,6 @@ body {
 	background-size: cover;
 }
 
-/* aboout content */
 .content {
 	position: absolute;
   	left: auto;
@@ -706,8 +705,9 @@ body {
 }
 
 .content__item table {
-	margin-left: 500px;
+	width: 100%;
 	text-align: center;
+	margin-left: 35%;
 	border-collapse: separate;
 	border-spacing: 50px 50px;
 }
@@ -726,7 +726,7 @@ body {
   	font-size: 1.0em;
  	font-family: "Playfair Display", serif;
   	text-align: left;
-	margin-left: 300px;
+	margin-left: 35%;
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 }
