@@ -45,7 +45,7 @@ a:focus {
   	position: relative;
   	color: inherit;
   	background: rgba(255, 255, 255, 0.5);
-  	min-height: 300px;
+  	min-height: 250px;
   	cursor: pointer;
   	text-align: center;
   	display: -webkit-box;
@@ -533,25 +533,26 @@ a:focus {
 /* 6 columns */
 @media screen and (min-width: 600px) {
   
-html, body,
-.container, .main {
-	height: 100vh;
-}
+	html, body,
+	.container, .main {
+		height: 100vh;
+	}
 
-.main {
-	height: 100%;
-	margin-right: 15%;
-	margin-left: 15%;
-	margin-top: 15%;
-	margin-bottom: 5%;
-}
+	.main {
+		height: 100%;
+		margin-right: 15%;
+		margin-left: 15%;
+		margin-top: 15%;
+		margin-bottom: 5%;
+	}
 
-.content__item {
-	font-size: 1em;
-}
+	.content__item {
+		font-size: 1em;
+	}
 
-.grid__item {
-    	padding: 45px 45px 30px;
+	.grid__item {
+    		padding: 45px 45px 30px;
+	}
 }
 
 @media screen and (min-width: 900px) {
