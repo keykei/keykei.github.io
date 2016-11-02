@@ -2,8 +2,14 @@
 
 This is my page.
 
-Code reference from Codrops.  
+
+### 今後やること
+- 戻るときに見開き部分に戻れるようにする
+- topリンクがスクロールと同時に動くようにする
+- 
+
+
+### Reference
+- Code from Codrops.  
 <http://tympanus.net/codrops/2015/04/15/grid-item-animation-layout/>
 
-Borrowed material from ![LinkedHibana](./img/88x31_banner.png).  
-<http://hibana.rgr.jp/>
